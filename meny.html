@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <title>BISTRO meny</title>
+    <meta charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/grid.css" type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <style>
+
+  /*CSS*/
+
+  header {
+    background-color: pink;
+    color: white;
+    justify-items: center;
+    width: 100%;
+    position: fixed;
+    display: block;
+    width: 100vw;
+    z-index:3;
+    height: 10.11%;
+
+  }
+  *{margin:0}
+
+  /* .flex-container{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+  }*/
+
+  #teglogga{
+    width: 80px;
+    position: fixed;
+    z-index: 5;
+  }
+
+  #namn {
+
+    z-index: 1;
+    color: white;
+    text-align: center;
+
+
+  }
+
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: rgb(158, 33, 60);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+  }
+
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(255, 166, 166);
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    top: 100%;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+  #matbild{
+    width:100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #rubrik{
+    background-color: white;
+    font-size: 300%;
+    color: rgb(158, 33, 60);
+    opacity: 0.8;
+    text-align: center;
+  }
+
+
+
+  #pasta {
+    color: rgb(158, 33, 60);
+    z-index: 2;
+    font-size: 200%;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    height: 55vh;
+  }
+
+  #pizza {
+    color: rgb(158, 33, 60);
+    z-index: 2;
+    font-size: 200%;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    height: 55vh;
+  }
+
+  #pizzalista{
+    color: black;
+    z-index: 2;
+    font-size: 100%;
+    text-align: center;
+    font-size: 120%;
+    position: relative;
+    top: 15%;
+    height: 25vh
+  }
+  #pastalista{
+    color: black;
+    z-index: 2;
+    font-size: 100%;
+    text-align: center;
+    font-size: 120%;
+    position: relative;
+    top: 15%;
+    height: 25vh
+  }
+
+  #tillbehorlista {
+    color: black;
+    z-index: 2;
+    font-size: 100%;
+    text-align: center;
+    font-size: 120%;
+    position: relative;
+    top: 45%;
+    height: 25vh;
+  }
+
+  #tillbehor {
+    color: rgb(158, 33, 60);
+    z-index: 2;
+    font-size: 200%;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    height: 25vh;
+  }
+
+  #drycklista {
+    color: black;
+    z-index: 2;
+    font-size: 100%;
+    text-align: center;
+    font-size: 120%;
+    position: relative;
+    top: 45%;
+    height: 25vh;
+  }
+
+  #dryck {
+    color: rgb(158, 33, 60);
+    z-index: 2;
+    font-size: 200%;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    height: 25vh;
+  }
+
+footer {
+  color: white;
+  background-color: grey;
+  width: 100vW;
+  height: 70%;
+}
+
+#mail , #adress , #telfonnummer {
+  color: white;
+  font-size: 90%;
+}
+
+   #footer_logga {
+    width: 50px;
+  }
+
+  /*     "=€!"=€)!             !!!!!GRID!!!!!        "€"€"!€€"!        */
+
+
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(40px, auto);
+    margin: 0;
+    padding: 0;
+  }
+
+  #rubrik{
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+
+  header {
+    grid-column: 1/-1;
+    grid-row: 1/3;
+  }
+#namn{
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+  #teglogga {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  #matbild{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+  }
+
+  .dropdown{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #pasta {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  #pizza {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  #pizzalista {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  #pastalista {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  #tillbehorlista {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  #tillbehor {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  #drycklista {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  #dryck {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  footer {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+  }
+
+  #mail {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  #adress {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  #telfonnummer {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+
+  #footer_logga {
+    grid-column: 4/5;
+    grid-row: 4/5;
+  }
+
+  /* JAVASCRIPT*/
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="flex-container">
+        <h1 id="namn">BISTRO</h1>
+      </header>
+
+      <img id="teglogga" alt="bild på tegs loga" src="data:image/png;base64,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">
+
+      <img id="matbild" src="img/matbild.jpeg" alt="bild på mat">
+
+<!-- dropdown navigation -->
+      <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Meny</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="bistro.html">Hem</a>
+    <a href="meny.html">Meny</a>
+    <a href="#">Öppettider</a>
+  </div>
+</div>
+
+
+    <h2 id="rubrik"> <u>Meny</u> </h2>
+    <p id="pasta"> <u>Pasta</u> </p>
+    <p id="pizza"> <u>Pizza</u>  </p>
+    <p id="tillbehor"> <u>Tillbehör</u>  </p>
+    <p id="dryck"> <u>Dryck</u>  </p>
+
+    <ul id="pizzalista">
+      <li>Margarita   300kr</li>
+      <li>Hawaii   350kr</li>
+      <li>Vesuvio   325kr</li>
+      <li>Capricosia   375kr</li>
+      <li>Kebab   400kr</li>
+    </ul>
+
+    <ul id="pastalista">
+      <li>Spaghett   300kr</li>
+      <li>Carbonara   350kr</li>
+      <li>Bolognäs   325kr</li>
+      <li>Pasta med Svamp   375kr</li>
+      <li>Sarres Special   400kr</li>
+    </ul>
+
+    <ul id="tillbehorlista">
+      <li>Caesarsallad   190kr</li>
+      <li>Pommes frites   100kr</li>
+      <li>Sötpotatis pommes   120kr</li>
+      <li>Surdegsbröd   100kr</li>
+      <li>Sås   50kr</li>
+    </ul>
+
+    <ul id="drycklista">
+      <li>Vatten   50kr</li>
+      <li>Läsk   50kr</li>
+      <li>Öl   100kr</li>
+      <li>Vin   120kr</li>
+      <li>Juice   50kr</li>
+    </ul>
+
+
+
+<footer></footer>
+     <p id="mail"> Kontakta oss: mail - bistroteg@gmail.com </p>
+     <p id="telfonnummer"> Telefon - +46 76 878 94 34 </p>
+     <p id="adress"> Besök oss - Kemistvägen 1 </p>
+     <!--<img id="footer_logga" src="teg_logg_footer.png" -->
+
+
+
+
+
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
